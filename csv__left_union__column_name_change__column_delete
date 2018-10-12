@@ -3,7 +3,7 @@ import pandas as pd
 
 ls
 
-os.chdir("/Users/yukaposo/hoge_file/csv_treat")
+os.chdir("/Users/yukaposo/hoge_file")
 
 ls
 
