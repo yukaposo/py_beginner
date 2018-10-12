@@ -1,0 +1,27 @@
+import os as os
+import pandas as pd
+
+ls
+
+os.chdir("/Users/yukaposo/hoge_file/csv_treat")
+
+ls
+
+df = pd.read_csv('hoge.csv')
+df.head()
+
+df2 = pd.read_csv('hoge2.csv')
+df2.head()
+
+df3 = pd.merge(df, df2, how = 'left', left_on = 'log_id', right_on = 'log_id')
+df3.head()
+
+del df3['hoge_id'] # カラムを削除
+df3.head()
+
+df3.rename(columns={'documentid_x': 'documentid'}, inplace = True) # inplace=False にすると上書きしない
+df3.head()
+
+ls
+
+df3.to_csv('hoge_completion.csv', index = False)
