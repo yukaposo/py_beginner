@@ -1,0 +1,11 @@
+# utf-8で出力されたcsvをshift-jisに変換する
+# 参照　https://teratail.com/questions/69166
+
+import os
+import codecs
+
+pwd
+
+with open( '/Users/yukaposo/Downloads/hoge_shiftjis.csv', 'w', encoding='cp932') as fout:
+    with open('/Users/yukaposo/Downloads/hoge_utf8.csv', encoding='utf-8') as fin:
+        fout.write(fin.read())
