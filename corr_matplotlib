@@ -1,0 +1,15 @@
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline
+
+ls
+
+df = pd.read_csv('hoge.csv')
+df.head()
+
+plt.figure(figsize=(30, 30)) #heatmap size
+plt.rcParams["font.size"] = 15
+plt.tick_params(labelsize=15)
+sns.heatmap(df.corr(), annot=True,  cmap='plasma', linewidths=1)
