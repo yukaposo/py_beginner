@@ -1,0 +1,19 @@
+import os as os
+# import json,csv
+import pandas as pd
+import glob
+
+ls
+
+os.chdir("/Users/yukaposo/hoge_file")
+
+ls
+
+csv_files = glob.glob('*.csv')
+list = []
+
+for f in csv_files:
+    list.append(pd.read_csv(f))
+df = pd.concat(list)
+
+df.to_csv('hoge_completion.csv', index = False) #, quoting = csv.QUOTE_ALL, encoding='utf-8-sig'
