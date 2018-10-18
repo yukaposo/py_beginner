@@ -9,11 +9,11 @@ os.chdir("/Users/yukaposo/hoge_file")
 
 ls
 
-csv_files = glob.glob('*.csv')
+csv_files = glob.glob('*.csv')  # globは'xxx.csv'に該当するファイル名を返す（フォルダ内のcsvファイルを指定している）
 list = []
 
 for f in csv_files:
     list.append(pd.read_csv(f))
-df = pd.concat(list)
+df = pd.concat(list)　　# hoge_file内のcsvを連結
 
-df.to_csv('hoge_completion.csv', index = False) #, quoting = csv.QUOTE_ALL, encoding='utf-8-sig'
+df.to_csv('hoge_completion.csv', index = False) # 「, quoting = csv.QUOTE_ALL, encoding='utf-8-sig'」
